@@ -1,0 +1,23 @@
+1. the project is built using sprig boot.
+2. There are 2 web servies LocationWs(running on port 9000) and ProductWS(running on 9001)
+3. These 2 Ws are shipped as executable jar files. Please paste them in desired location and run below commands.
+    java -jar LocationWS-0.1.0.jar
+    java -jar ProductWS-0.1.0.jar
+4. These 2 WS should eb Up and running before the web application is started.
+5. The main application code is in folder productcatalouge. Paste it in desired location and go to pom.xml location. 
+Follow below steps.
+
+		1. E:\project\productcatalouge (location for pom.xml)
+		2. got to cmd in this location
+		3. run command   mvn compile
+		4. on successfull compilation. run below command.
+                      mvn spring-boot:run
+
+6. Once application started, go to desired browser(I used chrome) and the cookie key value pair as below;
+  key = custID  value = Mahima
+
+ I have set LocationWS repository to return Location London for Mahima and Liverpool for Stephane(this being default). If you set the cookie value to something other than Mahima, application will show you error page).
+
+7, After setting teh cookie you can access the application with below Link.
+
+http://localhost:8080/user_list.html
